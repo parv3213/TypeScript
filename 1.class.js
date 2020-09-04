@@ -8,5 +8,7 @@ var Point = /** @class */ (function () {
     };
     return Point;
 }());
+var point1 = new Point();
+point1.draw();
 var point = new Point(2, 5);
 point.draw();
