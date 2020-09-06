@@ -3,9 +3,11 @@ class Point {
 	draw() {
 		console.log(`X :${this.x} and Y :${this.y}`);
 	}
+	getX() {
+		return this.x;
+	}
 }
 
-const point1 = new Point();
-point1.draw();
 const point = new Point(2, 5);
 point.draw();
+console.log(point.getX());

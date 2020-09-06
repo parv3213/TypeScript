@@ -6,9 +6,11 @@ var Point = /** @class */ (function () {
     Point.prototype.draw = function () {
         console.log("X :" + this.x + " and Y :" + this.y);
     };
+    Point.prototype.getX = function () {
+        return this.x;
+    };
     return Point;
 }());
-var point1 = new Point();
-point1.draw();
 var point = new Point(2, 5);
 point.draw();
+console.log(point.getX());
