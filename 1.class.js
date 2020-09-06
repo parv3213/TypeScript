@@ -9,8 +9,14 @@ var Point = /** @class */ (function () {
     Point.prototype.getX = function () {
         return this.x;
     };
+    Point.prototype.setX = function (value) {
+        if (value < 0)
+            throw new Error("Value cannot be less than 0");
+        this.x = value;
+    };
     return Point;
 }());
 var point = new Point(2, 5);
 point.draw();
+point.setX(10);
 console.log(point.getX());
