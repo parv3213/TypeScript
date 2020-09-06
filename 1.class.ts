@@ -1,18 +1,18 @@
 class Point {
-	constructor(private x?: number, private y?: number) {}
+	constructor(private _x?: number, private _y?: number) {}
 	draw() {
-		console.log(`X :${this.x} and Y :${this.y}`);
+		console.log(`X :${this._x} and Y :${this._y}`);
 	}
-	getX() {
-		return this.x;
+	get x() {
+		return this._x;
 	}
-	setX(value) {
+	set x(value) {
 		if (value < 0) throw new Error("Value cannot be less than 0");
-		this.x = value;
+		this._x = value;
 	}
 }
 
 const point = new Point(2, 5);
+point.x = 10;
+console.log(point.x);
 point.draw();
-point.setX(10);
-console.log(point.getX());
